@@ -1,0 +1,12 @@
+@import 'vars';
+
+.container{
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.error{
+    color: var(--hospital-green);
+    font-size: 100px;
+}

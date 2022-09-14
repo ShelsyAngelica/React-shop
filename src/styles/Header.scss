@@ -1,0 +1,74 @@
+nav{ 
+    display: flex; /*para que se coloquen al ladodel otro en el nav */
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);  /* colocamos la linea en la parte inf del navbar */
+}
+.menu{
+    display: none; /* desaparecemos el menu en la pantalla desktop */
+}
+.logo{
+    width: 100px;
+}
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none; 
+    padding: 0; /* eliminamos el que trae por defecto */
+    margin: 0;
+    display:flex; /* se coloquen uno al lado del otro*/
+    align-items: center;/* alinien verticalmente */
+    height: 60px; /* alto para que se separe del buscador*/
+}
+.navbar-left{
+    display: flex; /* se coloque al lado del logo uno al lado del otro*/
+}
+.navbar-left ul{ /* (primer hijo all)*/
+    margin-left: 12px; /*margen izq de all para separarlo del logo */
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    text-decoration: none; /* eliminamos el subrayado que tiene por defecto */
+    color: var(--very-light-pink); /* color letra*/
+    border: 1px solid var(--white) ;
+    border-radius:8px ;
+    padding: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{  /* se coloque de color verde el borde cuando nosposemos sobre el (all clothes etc)*/ 
+    border: 1px solid var(--hospital-green) ; /* borde*/
+    color: var(--hospital-green);/* color letra cuando nosposemos sobre el*/
+}
+.navbar-email{
+    color: var(--very-light-pink); /* color letra del correo*/
+    font-size: var(--sm); /* tamaño de la letra del correo*/
+    margin-right: 12px; /* margen derecha , para que no este el correo tan junto al carrito */
+}
+.navbar-shopping-cart{
+    position: relative;
+}
+.navbar-shopping-cart div{ 
+    width: 16px;/* ancho*/ /*circulo verde del numero 2*/
+    height: 16px; /* alto*//*circulo verde del numero 2*/
+    background-color: var(--hospital-green); /* color*/
+    border-radius: 50%;  /*circulo verde del numero 2*/
+    font-size: var(--sm); /* tamaño del 2*/
+    font-weight: bold; /* grosor del 2*/
+    position: absolute; /* para que se adhiera el 2 a su padre (el carrito)*/
+    top: -6px;  /* posicion alto de la bolita*/
+    right: -3px; /* posicion derecha de la bolita*/
+    display: flex;
+    justify-content: center; /* alineacion del 2 horizontalmente dentro del circulo */
+    align-items: center;/* alineacion del 2 verticalmente dentro del circulo */
+}
+@media (max-width: 640px) {
+    .menu{
+        display: block;
+    }    
+    .navbar-left ul{
+        display:none;
+    }
+    .navbar-email{
+        display: none;
+    }
+}

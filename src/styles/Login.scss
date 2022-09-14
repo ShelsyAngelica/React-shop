@@ -1,0 +1,94 @@
+.login{
+    width: 100%;  /* indicamos que que ocupe todo el ancho  */
+    height: 100vh;   /* indicamos que que ocupe todo el alto de la pantalla  */
+    display: grid;
+    place-items: center; /* propiedad de ccs grid que nos permite cetrar el contenido tanto ver como hor y no tenemos que usar mas de 2 propiedades  */
+}
+.login-form-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* esto nos permite crear un sistema de filas, la parte superior donde esta el titulo y sub le colocamos auto para que tome el tamaño que quiera , que tome 1fr una fraccion para el password y los input , y auto para el espacio que sobre */
+    width: 300px; /* indicamos el ancho que van a tener*/
+}
+.login-logo{
+    width: 150PX; /*  ancho del logo  */
+    margin-bottom: 48px; /* margen para hacer la separacion del titulo*/
+    justify-self: center; /* nos centra el logo en la grid que ya tenemos*/
+    display: none; /* para que no aparezca en desktop */
+}
+
+.login-form{ /* vamos a colorcar los labels encima de los inputs*/
+    display: flex; /*  nos coloca los elementos seguidos  */
+    flex-direction: column; /* pero le indicamos que los queremos en columnas  */
+
+}
+.login-form a{
+    color: var(--hospital-green); /*color  de la letra*/
+    font-size: var(--sm); /*tamaño de la letra*/
+    text-align: center; /*centrar el texto*/
+    text-decoration: none; /*elimina el subrayado por defecto*/
+    margin-top: 25px;
+    margin-bottom: 52px;
+}
+.login-label{
+    font-size: var(--sm); /*  utilizamos la variable de tamaño de letra  */
+    font-weight: bold;/*grosor de la letra*/
+    margin-bottom: 4px; /*  margin para que se nos separe del otro label*/
+}
+.login-input{
+    background-color: var(--text-input-field); /*  utilizamos la variable de color */
+    border: none; /* eliminamos el borde que tiene por defecto */
+    border-radius:8px ;/* redondeamos los bordes */
+    height: 30px ;/*  altura del recuadrito  */
+    font-size: var(--md);  /*  utilizamos la variable de tamaño de letra */
+    padding: 6px; /* margen internan para que no nos queden tan pegados los password*/
+    margin-bottom: 12px;  /* margen de abajo para que se separen los inputs*/
+}
+.login-input-email{
+    margin-bottom: 22px; /* margen de abajo para que se separe del boton log in*/
+
+}
+.login-input-password{
+    margin-bottom: 30px;
+}
+.login-primary-button{
+    background-color: var(--hospital-green);  /*  utilizamos la variable de color , para el color del boton */
+    border:none; /* eliminamos el borde que tiene por defecto */
+    border-radius: 8px; /* redondeamos los bordes */
+    color: var(--white);
+    width: 100%; ; /* ancho*/
+    cursor: pointer;  /* para que al pasar por encima nos salga una manita y no la flecha*/
+    font-size: var(--md);  /* utilizamos la variable de tamaño de letra */
+    font-weight:bold ; /*grosor de la letra*/
+    height: 50px; /*alto*/
+
+}
+.login-secondary-button{
+    background-color: var(--white);  /*  utilizamos la variable de color , para el color del boton */
+    border:1px solid var(--hospital-green); /*damos tamaño al borde, de que tipo y color*/
+    border-radius: 8px; /* redondeamos los bordes */
+    color: var(--hospital-green);
+    width: 100%; ; /* ancho*/
+    cursor: pointer;  /* para que al pasar por encima nos salga una manita y no la flecha*/
+    font-size: var(--md);  /* utilizamos la variable de tamaño de letra */
+    font-weight:bold ; /*grosor de la letra*/
+    height: 50px; /*alto*/
+
+}
+.login-login-button{ /*utiizamos esta clase secundaria para agregarle un margin  al boton*/
+    margin-top: 14px; /*margen de arriba*/
+    margin-bottom: 30px; /*margen de abajo*/
+}
+
+
+
+@media (max-width:640px) { /*hasta*/
+    .login-logo{
+        display: block; 
+
+    }
+    .login-secondary-button{
+        position: relative; 
+        top: 100px;
+                   
+    }
+}
