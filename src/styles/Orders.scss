@@ -1,0 +1,22 @@
+@import 'vars';
+
+.my-orders{
+    width: 100%; /* va a medir el 100% de la pantalla */
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+.orders-title{
+    font-size: var(--lg); /* tamaño de letra */
+    margin-bottom:40px ; /* espacio con la primera card */
+} 
+.orders-container{
+    display: grid; /* creamos una grid*/
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.orders-content{
+    display: flex;
+    flex-direction: column;
+}

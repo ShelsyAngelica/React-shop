@@ -1,0 +1,74 @@
+@import 'vars.scss';
+
+.checkout-my-order{
+    width: 100%; /* va a medir el 100% de la pantalla */
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+.checkout-title{
+    font-size: var(--lg); /* tamaño de letra */
+    margin-bottom:40px ; /* espacio con la primera card */
+} 
+.checkout-my-order-container{
+    display: grid; /* creamos una grid*/
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.checkout-my-order-content{
+    display: flex;
+    flex-direction: column;
+}
+.checkout-order{
+    display: grid; /* creamos una grid*/
+    grid-template-columns: auto 1fr auto; /* creamos columnas para que se listen los productos co sus preciso y nombres */
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px; /* margen abajo*/
+    border-radius: 8px; /* borde*/
+    padding: 0 24px;
+    
+}
+.checkout-order p:nth-child(1){
+    display: flex; /* para que la fecha y el n de articulos esta abjo del otro*/
+    flex-direction: column;
+}
+.checkout-order p span:nth-child(1){
+    font-size:var(--md) ; /* tamaño de letra del primer span (fecha)*/
+    font-weight: bold; /* grosor de la letra */
+
+}
+.checkout-order p span:nth-child(2){
+    font-size:var(--sm) ; /* tamaño de letra del primer span (n articulos)*/
+    color: var(--very-light-pink);
+}
+.checkout-order p:nth-child(2){
+   text-align: end; /*para que el precio total se alinie al final */
+   font-weight: bold; /* grosor de la letra */
+
+}
+.checkout-shopping-cart{
+    display: grid; /* creamos una grid*/
+    grid-template-columns: auto 1fr auto auto; /* creamos columnas para que se listen los productos co sus preciso y nombres */
+    gap: 16px;/* para que no queden tan juntos las img nombres y precio */
+    margin-bottom: 24px; /* margen de abajo entre cada cart*/
+    align-items: center; /* centramos los texto (nombre del producto y precio) centrar verticalmente*/
+}
+.checkout-shopping-cart figure {
+    margin:0; /* eliminamos ma margen qeu tiene pdefecto el figure */
+}
+.checkout-shopping-cart figure img{
+    width: 70px; /* ancho de la img */
+    height: 70px;/* alto de la img */
+    border-radius:20px ; /* borde de la img*/
+    object-fit: cover;
+}
+.checkout-shopping-cart p:nth-child(2){
+    color:var(--very-light-pink);  /* color de la letra Nombre del producto */
+}
+.checkout-shopping-cart p:nth-child(3){
+    font-size: var(--md);  /* tamaño de los numeros del precio */
+    font-weight: bold; /* grosor de la letra */
+}

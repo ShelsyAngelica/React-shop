@@ -1,0 +1,39 @@
+@import 'vars';
+
+.product-info{ /*(contenerdor de la inf)*/
+    margin:24px 24px 0 24px; /* margen arriba y derecha 24px, abajo 0 e izq 24px  */
+}
+.product-info p:nth-child(1){ /*(precio)*/
+    font-weight: bold; /* grosor de la letra*/
+    font-size: var(--md); /* tamaño de la letra*/
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.product-info p:nth-child(2){ /*(nombre del producto)*/
+    color: var(--very-light-pink);/* color de la letra*/
+    font-size: var(--md); /* tamaño de la letra*/
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+.product-info p:nth-child(3){ /*(descripcion del producto)*/
+    color: var(--very-light-pink);/* color de la letra*/
+    font-size: var(--sm); /* tamaño de la letra*/
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+.product-info-primary-button{
+        background-color: var(--hospital-green);  /*  utilizamos la variable de color , para el color del boton */
+        border:none; /* eliminamos el borde que tiene por defecto */
+        border-radius: 8px; /* redondeamos los bordes */
+        color: var(--white);
+        width: 100%; ; /* ancho*/
+        cursor: pointer;  /* para que al pasar por encima nos salga una manita y no la flecha*/
+        font-size: var(--md);  /* utilizamos la variable de tamaño de letra */
+        font-weight:bold ; /*grosor de la letra*/
+        height: 50px; /*alto*/
+}
+.product-info-add-to-cart-button{
+    display: flex; 
+    align-items: center;  /*alineacion verticalmente del carrito y texto dentro delboton*/
+    justify-content: center; /*alineacion horizontalmente del carrito y texto dentro delboton */
+}

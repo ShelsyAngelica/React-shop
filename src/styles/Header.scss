@@ -4,10 +4,10 @@ nav{
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);  /* colocamos la linea en la parte inf del navbar */
 }
-.menu{
+.menu-header{
     display: none; /* desaparecemos el menu en la pantalla desktop */
 }
-.logo{
+.nav-logo{
     width: 100px;
 }
 .navbar-left ul,
@@ -43,6 +43,10 @@ nav{
     color: var(--very-light-pink); /* color letra del correo*/
     font-size: var(--sm); /* tamaño de la letra del correo*/
     margin-right: 12px; /* margen derecha , para que no este el correo tan junto al carrito */
+    border: 1px solid var(--hospital-green);
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
 }
 .navbar-shopping-cart{
     position: relative;
@@ -62,7 +66,7 @@ nav{
     align-items: center;/* alineacion del 2 verticalmente dentro del circulo */
 }
 @media (max-width: 640px) {
-    .menu{
+    .menu-header{
         display: block;
     }    
     .navbar-left ul{

@@ -1,59 +1,54 @@
 @import 'vars';
 
-.create-newPassword-login{
+.my-account-login{
     width: 100%;  /* indicamos que que ocupe todo el ancho  */
     height: 100vh;   /* indicamos que que ocupe todo el alto de la pantalla  */
     display: grid;
     place-items: center; /* propiedad de ccs grid que nos permite cetrar el contenido tanto ver como hor y no tenemos que usar mas de 2 propiedades  */
 }
-.create-newPassword-form-container{
+.my-account-form-container{
     display: grid;
     grid-template-rows: auto 1fr auto; /* esto nos permite crear un sistema de filas, la parte superior donde esta el titulo y sub le colocamos auto para que tome el tamaño que quiera , que tome 1fr una fraccion para el password y los input , y auto para el espacio que sobre */
     width: 300px; /* indicamos el ancho que van a tener*/
 }
-.create-newPassword-logo{
+.my-account-logo{
     width: 150PX; /*  ancho del logo  */
     margin-bottom: 48px; /* margen para hacer la separacion del titulo*/
     justify-self: center; /* nos centra el logo en la grid que ya tenemos*/
     display: none; /* para que no aparezca en desktop */
 }
-.create-newPassword-title{
+.my-account-title{
     font-size: var(--lg) ; /*  utilizamos la variable de tamaño de letra para el titulo  */
-    margin-bottom: 12px;  /*  ancho del logo  */
-    text-align: center; /*  centrar titulo  */
+    margin-bottom: 36px;  /*  ancho del logo  */
+    text-align: start; /*  nos alinea titulo al comienzo */
 }
-.create-newPassword-subtitle{
-    color: var(--very-light-pink);  /*  utilizamos la variable de color, para el color de letra para el subtitulo  */
-    font-size: var(--md); /*  utilizamos la variable de tamaño de letra para el subtitulo  */
-    font-weight: 300;/*grosor de la letra*/
-    margin-top: 0; /* margin de 0 para que no se nos crucen los que ya tienen los parrafos por defecto*/
-    margin-bottom: 32px ;/*  margin para que se nos separe de los input y label*/
-    text-align: center; /*  centramos el subtitulo  */
-}
-.create-newPassword-form{ /* vamos a colorcar los labels encima de los inputs*/
+
+.my-account-form{ /* vamos a colorcar los labels encima de los inputs*/
     display: flex; /*  nos coloca los elementos seguidos  */
     flex-direction: column; /* pero le indicamos que los queremos en columnas  */
 
 }
-.create-newPassword-label{
+.my-account-form div{ 
+    display: flex; /*  nos coloca los elementos seguidos  */
+    flex-direction: column; /* pero le indicamos que los queremos en columnas  */
+
+}
+.my-account-label{
     font-size: var(--sm); /*  utilizamos la variable de tamaño de letra  */
     font-weight: bold;/*grosor de la letra*/
     margin-bottom: 4px; /*  margin para que se nos separe del otro label*/
 }
-.create-newPassword-input{
-    background-color: var(--text-input-field); /*  utilizamos la variable de color */
-    border: none; /* eliminamos el borde que tiene por defecto */
-    border-radius:8px ;/* redondeamos los bordes */
-    height: 30px ;/*  altura del recuadrito  */
-    font-size: var(--md);  /*  utilizamos la variable de tamaño de letra */
-    padding: 6px; /* margen internan para que no nos queden tan pegados los password*/
-    margin-bottom: 12px;  /* margen de abajo para que se separen los inputs*/
+.my-account-value{
+    color:var(--very-light-pink);
+    font-size: var(--md);
+    margin: 8px 0 32px 0;
 }
-.create-newPassword-primary-button{
-    background-color: var(--hospital-green);  /*  utilizamos la variable de color , para el color del boton */
-    border:none; /* eliminamos el borde que tiene por defecto */
+
+.my-account-secondary-button{
+    background-color: var(--white);  /*  utilizamos la variable de color , para el color del boton */
+    border: 1px solid var(--hospital-green);
     border-radius: 8px; /* redondeamos los bordes */
-    color: var(--white);
+    color: var(--hospital-green);
     width: 100%; ; /* ancho*/
     cursor: pointer;  /* para que al pasar por encima nos salga una manita y no la flecha*/
     font-size: var(--md);  /* utilizamos la variable de tamaño de letra */
@@ -61,13 +56,16 @@
     height: 50px; /*alto*/
 
 }
-.create-newPassword-login-button{ /*utiizamos esta clase secundaria para agregarle un margin  al boton*/
+.my-account-login-button{ /*utiizamos esta clase secundaria para agregarle un margin  al boton*/
     margin-top: 14px; /*margen de arriba*/
     margin-bottom: 30px; /*margen de abajo*/
 }
 @media (max-width:640px) { /*hasta*/
-    .create-newPassword-logo{
-        display: block; 
-
+    .my-account-form-container{
+        height: 100%;
+    }
+    .my-account-form{
+        height: 100%;
+        justify-content: space-between;
     }
 }

@@ -15,6 +15,14 @@ module.exports = {
     //con que extensiones voy a trabajar
     resolve:{
         extensions:['.js','.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@containers': path.resolve(__dirname, 'src/containers'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+            '@logos': path.resolve(__dirname, 'src/assets/Logos'),
+            '@icons': path.resolve(__dirname, 'src/assets/Icons'),
+            '@hooks': path.resolve(__dirname, 'src/hooks')
+        }
     },
     //reglas que vamos a crear con nuestros loader y nuestros plugins 
     module:{
@@ -41,6 +49,10 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                type: 'asset'
             }
 
         ]

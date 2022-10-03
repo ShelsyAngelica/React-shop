@@ -1,0 +1,41 @@
+@import 'vars';
+
+.product-detail{
+    width: 360px;
+    padding-bottom: 24px;
+    position: absolute;
+    right: 0; /* quede en la parte derecha de la pantalla */
+
+}
+.product-detail-close{
+    background: var(--white);
+    width: 14px;
+    height: 14px;
+    position: absolute; 
+    top: 24px;
+    left: 24px; 
+    z-index: 2;/* para que este por encima */
+    padding: 12px;
+    border-radius: 50%; /* circulo de la x*/
+}
+.product-detail-close img{   
+    position: absolute; /* para que se adhiera  a su padre */
+    
+}
+.product-detail-close:hover {    
+    cursor: pointer;   /* cuando pase  este sobre la x sale una manita*/  
+}
+.product-detail >img:nth-child(2){
+    width: 100%; /* ancho de nuestra img  */
+    height: 360px; /* alto de nuestra img  */
+    object-fit:cover ; /* nuestra img quede como originamente es  */
+    border-radius: 0 0 20px 20px; /* borde en sentido de las manesillas del reloj */
+}
+
+@media (max-width:640px) {
+    .product-detail{
+        width: 100%; /*responsive para que ocupe toda la pantalla cuando sea hasta 640px*/
+    }
+ 
+    
+}
